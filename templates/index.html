@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation de l'API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="display-4">Documentation de l'API</h1>
+
+    <h2 class="mt-4">Insertion de Données de Projet</h2>
+    <p class="lead">Endpoint : <code>/insert</code></p>
+    <p class="lead">Méthode : <code>POST</code></p>
+    <p class="lead">Description : Cet endpoint est utilisé pour insérer des données sur un projet.</p>
+    <p class="lead">Paramètres :</p>
+    <ul>
+        <li><code>code_projet</code> (chaîne) - Le code du projet.</li>
+        <li><code>description</code> (chaîne) - La description du projet.</li>
+    </ul>
+    <p class="lead">Exemple de Requête :</p>
+    <pre class="bg-light p-3">
+POST /insert HTTP/1.1
+Host:  http://127.0.0.1:8000/
+Content-Type: application/x-www-form-urlencoded
+
+code_projet=projet123&description=Description%20du%20projet
+        </pre>
+
+    <h2 class="mt-4">Récupération de Données de Projet</h2>
+    <p class="lead">Endpoint : <code>/get/{project_id}</code></p>
+    <p class="lead">Méthode : <code>GET</code></p>
+    <p class="lead">Description : Cet endpoint est utilisé pour récupérer des données de projet en fonction de l'ID du projet.</p>
+    <p class="lead">Exemple de Requête :</p>
+    <pre class="bg-light p-3">
+GET /get_project_data/123 HTTP/1.1
+Host:  http://127.0.0.1:8000/
+        </pre>
+
+</div>
+
+<!-- Intégration du JavaScript Bootstrap via le CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MkO5f1S4iPRMzL2KRm5fF5Oj09meM2W9cCkRz3f5DF+xsw2I5tZq5F5d5uT5f5B5k" crossorigin="anonymous"></script>
+</body>
+</html>
